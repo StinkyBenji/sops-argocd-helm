@@ -1,0 +1,16 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: argocd-custom-argo-notifications-controller-secret
+  namespace: argocd
+  labels:
+    app.kubernetes.io/component: notifications-controller
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: custom-argo-notifications-controller
+    app.kubernetes.io/part-of: argocd
+    helm.sh/chart: argo-cd-4.10.4
+data:
+  slack-token: >-
+    eG94Yi05Mzg4NjY0NjAwNTEtMTA3MzI5MDgyODQ4Ny04QnU2ZXVmU2xKclZrMTM0TlJzdjdiQ04=
+type: Opaque

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/display-name: custom-argocd
+    openshift.io/sa.scc.supplemental-groups: 1000760000/10000
+    openshift.io/sa.scc.uid-range: 1000760000/1000
+    openshift.io/sa.scc.mcs: s0:c27,c2
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+  name: argocd
