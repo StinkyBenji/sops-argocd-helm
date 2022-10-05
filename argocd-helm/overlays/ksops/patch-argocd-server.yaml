@@ -14,11 +14,11 @@
         env:
           - name: XDG_CONFIG_HOME
             value: /.config
-          - name: AWS_ACCESS_KEY_ID
+          - name: SOPS_AGE_KEY_FILE
             valueFrom:
               secretKeyRef:
                 name: age-key
-                key: key.txt
+                key: keys.txt
         # Use init containers to configure custom tooling
         # https://argoproj.github.io/argo-cd/operator-manual/custom_tools/
         volumes:
